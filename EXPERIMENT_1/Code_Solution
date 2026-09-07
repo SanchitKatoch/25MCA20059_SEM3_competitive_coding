@@ -1,0 +1,16 @@
+Leetcode : 492
+
+class Solution {
+public:
+    vector<int> constructRectangle(int area) {
+        vector<int> answer(2);
+        int width=sqrt(area);
+        while(area%width){
+            width--;
+        }
+        int length=area/width;
+        answer[0]=length;
+        answer[1]=width;
+        return(answer);        
+    }
+};
